@@ -1,175 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fin It!</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paradigm - Where Technology Meets Aesthetics.">
+  <title>PARADIGM</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for Shrikhand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Banner Section -->
-    <section id="banner">
-        <h1>Finish It!</h1>
-        <p>Your gaming creators bringing you the best experiences.</p>
-    </section>
-
-    <!-- Navbar Section -->
-    <nav id="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#creators">Creators</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#follow-us">Follow Us</a></li>
-            <li><a href="#todo-app">To-Do App</a></li>
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <div class="brand-logo">
+        <h1 class="brand-title">PARADIGM</h1>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#creators" class="nav-link">Creators</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
         </ul>
-    </nav>
-
-    <!-- Main content -->
-    <header>
-        <h1>Finish It!</h1>
-        <p id="creatorDescription">Creators</p>
-    </header>
-
-    <!-- Creators Section -->
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    <section id="creators-section">
-        <div class="creator-container">
-            <!-- Creator 1 -->
-            <div class="creator-card">
-                <img src="creator1.jpg" alt="Creator 1">
-                <h3>Creator 1</h3>
-                <p class="creator-description">
-                    Creator 1 is a game designer with a passion for action-packed experiences.
-                    With a deep understanding of player psychology, they focus on creating games 
-                    that challenge and excite. When they’re not designing games, you can find them 
-                    exploring new virtual worlds, gaining inspiration for future projects.
-                </p>
-            </div>
-
-            <!-- Creator 2 -->
-            <div class="creator-card">
-                <img src="creator2.jpg" alt="Creator 2">
-                <h3>Creator 2</h3>
-                <p class="creator-description">
-                    Creator 2 is a developer known for their expertise in coding mechanics and 
-                    performance optimization. They strive to create smooth gameplay experiences 
-                    while pushing the limits of graphics and sound design. Their dedication to 
-                    perfection is unmatched, making their games both visually stunning and technically sound.
-                </p>
-            </div>
-
-            <!-- Creator 3 -->
-            <div class="creator-card">
-                <img src="creator3.jpg" alt="Creator 3">
-                <h3>Creator 3</h3>
-                <p class="creator-description">
-                    With a background in narrative design, Creator 3 crafts immersive storylines 
-                    that engage players emotionally. They believe in the power of storytelling to 
-                    create experiences that resonate long after the game is over. They are constantly 
-                    exploring new ways to merge narrative with gameplay mechanics to create something truly unique.
-                </p>
-            </div>
-
-            <!-- Creator 4 -->
-            <div class="creator-card">
-                <img src="creator4.jpg" alt="Creator 4">
-                <h3>Creator 4</h3>
-                <p class="creator-description">
-                    Creator 4 is an artist whose visual style is instantly recognizable. 
-                    They specialize in concept art, character design, and world-building. Their 
-                    vibrant, colorful aesthetic brings games to life in ways that captivate and 
-                    inspire players. They are always experimenting with new techniques to push their craft further.
-                </p>
-            </div>
-
-            <!-- Creator 5 -->
-            <div class="creator-card">
-                <img src="creator5.jpg" alt="Creator 5">
-                <h3>Creator 5</h3>
-                <p class="creator-description">
-                    Creator 5 is a sound designer and composer whose music sets the tone for every game 
-                    they touch. They believe music is an integral part of game design, and they work closely 
-                    with the development team to ensure every sound is in harmony with the game's atmosphere and mood.
-                </p>
-            </div>
-
-            <!-- Creator 6 -->
-            <div class="creator-card">
-                <img src="creator6.jpg" alt="Creator 6">
-                <h3>Creator 6</h3>
-                <p class="creator-description">
-                    Creator 6 is a project manager who makes sure everything runs smoothly during development. 
-                    With a background in logistics and team coordination, they ensure deadlines are met, budgets 
-                    are kept, and all team members are working towards the same goal. Their organizational skills are vital 
-                    to turning creative ideas into completed projects.
-                </p>
-            </div>
-
-            <!-- Creator 7 -->
-            <div class="creator-card">
-                <img src="creator7.jpg" alt="Creator 7">
-                <h3>Creator 7</h3>
-                <p class="creator-description">
-                    Creator 7 is a community manager who understands the importance of player feedback and engagement. 
-                    They foster a strong relationship between players and developers, ensuring that the community’s voice 
-                    is heard and valued. Their dedication to creating a positive and active community has made them a key player 
-                    in the development process.
-                </p>
-            </div>
+        <div class="hamburger-menu" onclick="toggleDropdown()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section id="mission" class="info-section">
-        <h2>Our Mission</h2>
-        <p>Our mission is to revolutionize the gaming experience by bringing together creative minds to build unique, engaging, and fun games.</p>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision" class="info-section">
-        <h2>Our Vision</h2>
-        <p>We envision a world where creativity drives innovation, and our games bring people together through challenging and rewarding experiences.</p>
-    </section>
-
-    <!-- Follow Us Section -->
-    <section id="follow-us" class="info-section">
-        <h2>Follow Us</h2>
-        <p>Stay updated with our latest projects and news.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+      </nav>
+      <!-- Dropdown Menu (for mobile) -->
+      <div id="dropdown" class="dropdown">
+        <div class="dropdown-content">
+          <a href="#creators">Creators</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#products">Products</a>
         </div>
-    </section>
-
-    <!-- To-Do App Section -->
-<section id="todo-app" class="info-section">
-    <h2>To-Do App</h2>
-    <div class="todo-container">
-        <input type="text" id="todo-input" placeholder="Enter your task...">
-        
-        <!-- Start Date -->
-        <input type="date" id="start-date" placeholder="Start Date">
-        
-        <!-- Finish Date -->
-        <input type="date" id="finish-date" placeholder="Finish Date">
-        
-        <!-- Priority -->
-        <select id="priority">
-            <option value="Low">Low Priority</option>
-            <option value="Medium">Medium Priority</option>
-            <option value="High">High Priority</option>
-        </select>
-        
-        <button id="add-task">Add Task</button>
-        <ul id="todo-list"></ul>
-        <button id="download-btn">Download List</button>
+      </div>
     </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="main-container">
+        <h1 class="brand-title">Welcome to PARADIGM</h1>
+        <p class="brand-description">"Aesthetics are not just about what we see, but how we feel what we see."</p>
+      </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="product-showcase">
+      <h2 class="product-title">Our Handpicked Vintage Collection</h2>
+      <div class="product-grid">
+        <div class="product-card alt">
+          <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/476411138_3789476261383136_6436375606711662191_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeHfA9IvLGlZb5PRu5Z53LpMZ39xH2MD9VBnf3EfYwP1UPU5S0iJYtHAdsGmu5CTmaubFKp3miRvc1qKdZ2XORrj&_nc_ohc=MN-vVZ1sy9wQ7kNvwGaZQ0N&_nc_oc=Adk47N1HTqQjM2DKtNcIPK19pLMN9aXqH0FbVStgJGZDSGIjf-slZjfvptKuhac3ask&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&_nc_gid=jatOxMETtvBBvCcwL03K7g&oh=00_AYFM46lKlab1aMEqwM8n7qjAOcjCaf_HqlM5qHnNI_CpOg&oe=67F708F4" alt="Vintage Clock">
+          <div class="info">
+            <h3>Vintage Clock</h3>
+            <p>Handcrafted brass and wood clock.</p>
+            <span>$85.00</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://memoriesmade.ca/cdn/shop/files/Leather_Journal_Engraved_646548.jpg" alt="Leather Journal">
+          <div class="info">
+            <h3>Leather Journal</h3>
+            <p>Soft-bound with quality aged leather.</p>
+            <span>$45.00</span>
+          </div>
+        </div>
+        <div class="product-card alt">
+          <img src="https://i.ebayimg.com/images/g/WfgAAOSwpFBjIrLs/s-l1200.jpg" alt="Brass Lamp">
+          <div class="info">
+            <h3>Brass Lamp</h3>
+            <p>Retro-style bedside lamp.</p>
+            <span>$110.00</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://images.stockcake.com/public/8/9/1/8917a558-16aa-4911-9cf1-8046c16a5103_large/vintage-radio-evening-stockcake.jpg" alt="Vintage Radio">
+          <div class="info">
+            <h3>Vintage Radio</h3>
+            <p>Retro look, modern tech inside.</p>
+            <span>$130.00</span>
+          </div>
+        </div>
+        <div class="product-card alt">
+          <img src="https://images.squarespace-cdn.com/content/v1/5ca223529d414920186973a5/1716580544996-N6KBTV2CN4OPD6FWOKJS/processed_55e234ea70a647348b185a709220ec54.jpeg?format=1500w" alt="Antique Typewriter">
+          <div class="info">
+            <h3>Antique Typewriter</h3>
+            <p>Perfect for collectors and artists.</p>
+            <span>$200.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section id="creators" class="creators-section"> <center>
+  <h2>Our Creators</h2>
+  <ul class="creators-list">
+    <li>Daniel Pacundo</li>
+    <li>Jane Rosel</li>
+    <li>Celestino D. Regis</li>
+    <li>Zianne Puntanar</li>
+    <li>John Kyle Ramos</li>
+    <li>Regie Zabala Lauro</li>
+  </ul>
+</center>
 </section>
 
 
-    <script src="script.js"></script>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Paradigm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle the dropdown menu visibility (for mobile)
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdown');
+      dropdown.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
