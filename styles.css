@@ -9,7 +9,7 @@ body {
   font-family: 'Shrikhand', cursive;
   line-height: 1.6;
   /* Animated gradient background for the whole page */
-  background: linear-gradient(45deg, #3e2723, #4e342e, #5d4037, #6d4c41);
+  background: linear-gradient(45deg, #3e2723, #4e342e, #5d4037, #6d4c41, #808080);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: #fff;
