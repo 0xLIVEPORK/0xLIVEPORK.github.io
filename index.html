@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Paradigm - Where Technology Meets Aesthetics.">
-  <title>PARADIGM</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts for Shrikhand -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paradigm - Where Technology Meets Aesthetics." />
+  <title>Paradigm</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.15752-9/488274302_684276860754891_1914594826559657796_n.png?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE8VqZXX1PQVFVCRfWBXLdsy_gellLbOb3L-B6WUts5vY8UXJA_U63LnCz6lOTEfc9eViZaaU80XukgcZP3sfNG&_nc_ohc=AtlbOYP2hRsQ7kNvwEasGaM&_nc_oc=AdmKcZmYv4AGOQQvTaDNKGWR9oCkFWDuXcg1v9v55pNRyHDd2ZXiN95FmpBnRkh9iZY&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&oh=03_Q7cD2AHW1iE90fjCtuDhmPYMHHokFccYe_4hIffMDqS-0t0HRg&oe=681AEECD" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Header Section -->
   <header>
     <div class="header-container">
       <div class="brand-logo">
@@ -25,96 +25,128 @@
           <li><a href="#contact" class="nav-link">Contact Us</a></li>
           <li><a href="#products" class="nav-link">Products</a></li>
         </ul>
-        <div class="hamburger-menu" onclick="toggleDropdown()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+        <!-- Cart Indicator -->
+        <div id="cart-indicator" onclick="openCartModal()">
+          Cart (<span id="cart-count">0</span>)
         </div>
       </nav>
-      <!-- Dropdown Menu (for mobile) -->
-      <div id="dropdown" class="dropdown">
-        <div class="dropdown-content">
-          <a href="#creators">Creators</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact Us</a>
-          <a href="#products">Products</a>
-        </div>
-      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
     <section class="hero-section">
-      <div class="main-container">
-        <h1 class="brand-title">Welcome to PARADIGM</h1>
-        <p class="brand-description">"Aesthetics are not just about what we see, but how we feel what we see."</p>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to PARADIGM</h1>
+        <p class="hero-subtitle">Aesthetics are not just about what we see, but how we feel.</p>
       </div>
     </section>
 
-    <!-- Product Showcase -->
     <section id="products" class="product-showcase">
-      <h2 class="product-title">Our Handpicked Vintage Collection</h2>
+      <h2 class="section-title">Our Handpicked Vintage Collection</h2>
       <div class="product-grid">
-        <div class="product-card alt">
-          <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/476411138_3789476261383136_6436375606711662191_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeHfA9IvLGlZb5PRu5Z53LpMZ39xH2MD9VBnf3EfYwP1UPU5S0iJYtHAdsGmu5CTmaubFKp3miRvc1qKdZ2XORrj&_nc_ohc=MN-vVZ1sy9wQ7kNvwGaZQ0N&_nc_oc=Adk47N1HTqQjM2DKtNcIPK19pLMN9aXqH0FbVStgJGZDSGIjf-slZjfvptKuhac3ask&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&_nc_gid=jatOxMETtvBBvCcwL03K7g&oh=00_AYFM46lKlab1aMEqwM8n7qjAOcjCaf_HqlM5qHnNI_CpOg&oe=67F708F4" alt="Vintage Clock">
-          <div class="info">
-            <h3>Vintage Clock</h3>
-            <p>Handcrafted brass and wood clock.</p>
-            <span>$85.00</span>
-          </div>
-        </div>
-        <div class="product-card">
+        <!-- Product Card: Leather Journal -->
+        <div class="product-card"
+             data-title="Leather Journal"
+             data-description="Soft-bound with quality aged leather."
+             data-price="$45.00"
+             data-image="https://memoriesmade.ca/cdn/shop/files/Leather_Journal_Engraved_646548.jpg">
           <img src="https://memoriesmade.ca/cdn/shop/files/Leather_Journal_Engraved_646548.jpg" alt="Leather Journal">
-          <div class="info">
+          <div class="product-info">
             <h3>Leather Journal</h3>
             <p>Soft-bound with quality aged leather.</p>
             <span>$45.00</span>
           </div>
         </div>
-        <div class="product-card alt">
+
+        <!-- Product Card: Brass Lamp -->
+        <div class="product-card"
+             data-title="Brass Lamp"
+             data-description="Retro-style bedside lamp."
+             data-price="$110.00"
+             data-image="https://i.ebayimg.com/images/g/WfgAAOSwpFBjIrLs/s-l1200.jpg">
           <img src="https://i.ebayimg.com/images/g/WfgAAOSwpFBjIrLs/s-l1200.jpg" alt="Brass Lamp">
-          <div class="info">
+          <div class="product-info">
             <h3>Brass Lamp</h3>
             <p>Retro-style bedside lamp.</p>
             <span>$110.00</span>
           </div>
         </div>
-        <div class="product-card">
-          <img src="https://images.stockcake.com/public/8/9/1/8917a558-16aa-4911-9cf1-8046c16a5103_large/vintage-radio-evening-stockcake.jpg" alt="Vintage Radio">
-          <div class="info">
-            <h3>Vintage Radio</h3>
-            <p>Retro look, modern tech inside.</p>
-            <span>$130.00</span>
+
+        <!-- Product Card: Vintage Clock -->
+        <div class="product-card"
+             data-title="Vintage Clock"
+             data-description="Handcrafted brass and wood clock."
+             data-price="$85.00"
+             data-image="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/476411138_3789476261383136_6436375606711662191_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeHfA9IvLGlZb5PRu5Z53LpMZ39xH2MD9VBnf3EfYwP1UPU5S0iJYtHAdsGmu5CTmaubFKp3miRvc1qKdZ2XORrj&_nc_ohc=MN-vVZ1sy9wQ7kNvwGaZQ0N&_nc_oc=Adk47N1HTqQjM2DKtNcIPK19pLMN9aXqH0FbVStgJGZDSGIjf-slZjfvptKuhac3ask&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&_nc_gid=jatOxMETtvBBvCcwL03K7g&oh=00_AYFM46lKlab1aMEqwM8n7qjAOcjCaf_HqlM5qHnNI_CpOg&oe=67F708F4">
+          <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/476411138_3789476261383136_6436375606711662191_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3a1ebe&_nc_eui2=AeHfA9IvLGlZb5PRu5Z53LpMZ39xH2MD9VBnf3EfYwP1UPU5S0iJYtHAdsGmu5CTmaubFKp3miRvc1qKdZ2XORrj&_nc_ohc=MN-vVZ1sy9wQ7kNvwGaZQ0N&_nc_oc=Adk47N1HTqQjM2DKtNcIPK19pLMN9aXqH0FbVStgJGZDSGIjf-slZjfvptKuhac3ask&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&_nc_gid=jatOxMETtvBBvCcwL03K7g&oh=00_AYFM46lKlab1aMEqwM8n7qjAOcjCaf_HqlM5qHnNI_CpOg&oe=67F708F4" alt="Vintage Clock">
+          <div class="product-info">
+            <h3>Vintage Clock</h3>
+            <p>Handcrafted brass and wood clock.</p>
+            <span>$85.00</span>
           </div>
         </div>
-        <div class="product-card alt">
+
+        <!-- Product Card: Antique Typewriter -->
+        <div class="product-card"
+             data-title="Antique Typewriter"
+             data-description="Perfect for collectors and artists."
+             data-price="$200.00"
+             data-image="https://images.squarespace-cdn.com/content/v1/5ca223529d414920186973a5/1716580544996-N6KBTV2CN4OPD6FWOKJS/processed_55e234ea70a647348b185a709220ec54.jpeg?format=1500w">
           <img src="https://images.squarespace-cdn.com/content/v1/5ca223529d414920186973a5/1716580544996-N6KBTV2CN4OPD6FWOKJS/processed_55e234ea70a647348b185a709220ec54.jpeg?format=1500w" alt="Antique Typewriter">
-          <div class="info">
+          <div class="product-info">
             <h3>Antique Typewriter</h3>
             <p>Perfect for collectors and artists.</p>
             <span>$200.00</span>
           </div>
         </div>
+
+        <!-- Product Card: Vintage Radio -->
+        <div class="product-card"
+             data-title="Vintage Radio"
+             data-description="Retro look, modern tech inside."
+             data-price="$130.00"
+             data-image="https://images.stockcake.com/public/8/9/1/8917a558-16aa-4911-9cf1-8046c16a5103_large/vintage-radio-evening-stockcake.jpg">
+          <img src="https://images.stockcake.com/public/8/9/1/8917a558-16aa-4911-9cf1-8046c16a5103_large/vintage-radio-evening-stockcake.jpg" alt="Vintage Radio">
+          <div class="product-info">
+            <h3>Vintage Radio</h3>
+            <p>Retro look, modern tech inside.</p>
+            <span>$130.00</span>
+          </div>
+        </div>
       </div>
     </section>
 
-
-<section id="creators" class="creators-section"> <center>
-  <h2>Our Creators</h2>
-  <ul class="creators-list">
-    <li>Daniel Pacundo</li>
-    <li>Jane Rosel</li>
-    <li>Celestino D. Regis</li>
-    <li>Zianne Puntanar</li>
-    <li>John Kyle Ramos</li>
-    <li>Regie Zabala Lauro</li>
-  </ul>
-</center>
-</section>
-
-
+    <section id="creators" class="creators-section">
+      <h2 class="section-title">Our Creators</h2>
+      <div class="creators-grid">
+        <div class="creator-bubble">
+          <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t1.15752-9/489143259_1022090182582449_4498543787348572347_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEr8Qc8Th38GRgxi5_OJpyzTNUZ-iVHgslM1Rn6JUeCyXqKI8Xis-Cdg4Dvl2pgQxBeuMlMCuVgmyvYQWyuBLmN&_nc_ohc=FEecKb66huoQ7kNvwG2zDQY&_nc_oc=AdnVFJvB71b2SmsFK0Vemc54DbHYspPivxnjJ4lUPcd0NJSoDqXyLmGCD0_tjADbqE0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-1.fna&oh=03_Q7cD2AHSkj_COZWQWFqweHXiE9YZ0mmAT2kV2rgKQf9jHeQPaA&oe=681B0306" alt="Daniel Pacundo">
+          <span>Daniel Pacundo</span>
+        </div>
+        <div class="creator-bubble">
+          <img src="https://scontent.fmnl8-4.fna.fbcdn.net/v/t1.15752-9/488263539_1375712310121337_5510278391343089276_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGn8CLIiH1msjLvEs2p-sykwoC9YUu7H73CgL1hS7sfvSnahxjrJ7URri0cb1xasiXJTZbWg83mAALLTyBcfrYS&_nc_ohc=ocXdRvz1CVMQ7kNvwEMZCyH&_nc_oc=AdlXbP7qcuCxrq1pSIvMvziDM_GYBf4Rb5DBA1CzZRait5sXITjFBUexRKSc2S2cyaQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-4.fna&oh=03_Q7cD2AHqY8lv778TZLR9Sdd1PHo9r4yPCXLUf1wkLEyvfgg8Mg&oe=681ADEBB" alt="Celestino Regis">
+          <span>Celestino Regis</span>
+        </div>
+        <div class="creator-bubble">
+          <img src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/487388137_651261650948372_4248417151626183243_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFUwAAVpBE-3JVFzzqLR0no47gEKAqt6aPjuAQoCq3po3tcCIeCGK7dNNWQZwsLLCHzx2FOEZWrLSdca2uJTZeo&_nc_ohc=lwMhiQXFFToQ7kNvwHM_JgQ&_nc_oc=AdmuGrpeEtdT77PKgUCZwg8HF8kIAefSwRX8-CK_d_s2iWrWNw0qfnzzWn6nGtWlgJY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=03_Q7cD2AGSNM8dVuu8xn3hrwjnrZ8oOg-Og7XqDX3-vSci9t3P5Q&oe=681AFB57" alt="Zianne Puntanar">
+          <span>Zianne Puntanar</span>
+        </div>
+        <div class="creator-bubble">
+          <img src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/488194096_529567103235063_344099060994791280_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHwiRKrEcOCVER5WK1yoq4SIsY8F-VD5_wixjwX5UPn_MNynriu766KfJV71KkqqKxfWbK4_wtrqFBY92I4CLh6&_nc_ohc=uZSirXQ7RxsQ7kNvwG8N-Gu&_nc_oc=Adkz7mln_K7QIpBDfsPMVNs3siTtN_qUamu6twClT2HJmDPD4f7p2gWdrcQryqkL8A4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=03_Q7cD2AFTNCPwttrPLw0gCYEcaWZilmA9JHJH3ORakbBIbhmq3w&oe=681ACC4C" alt="Jane Rosel">
+          <span>Jane Rosel</span>
+        </div>
+        <div class="creator-bubble">
+          <img src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/489038201_1028499789150033_1639781640658932599_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHkQQHiqB2QoqAGMTrTAd1YI6-rdaSkFisjr6t1pKQWK6eFUHmy7f7zD3ONRn1Udmd-aLwcebEUw7B4gZUOppeS&_nc_ohc=XaDNhdJ5f7kQ7kNvwFB3Jex&_nc_oc=AdkNVpsjPkKgvgsjavLpYxZeEylQOUkn-SqerG5P0Zdk9MApQxR59az9Tb0qdXtxEjY&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=03_Q7cD2AHRCdAZ_XfhRoxbV47O2AygvCa8M9uCQUsRw_OK9L6BfQ&oe=681AEC3E" alt="Regie Zabal Lauro">
+          <span>Regie Zabal Lauro</span>
+        </div>
+        <div class="creator-bubble">
+          <img src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/488592218_2327237874343755_4472397138486715253_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeE28WxpuRYP1xFLxvp1YR6J68OxM0sMT8jrw7EzSwxPyIjgAxsW8sTsidg74wZEFtLl_nGcdKoqskosOuMul_O2&_nc_ohc=MM26-FJQvLwQ7kNvwEPQotZ&_nc_oc=Adly9DkiHywCxpdwPQNzQ7WxiS6rmSzG4Y5xM1_j-OOS1ezX5QnjId9DJrGvHOu9JXQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=03_Q7cD2AGVUvTWrmYkEFF6DDWoLn8betQjncTIocSnhA0rSktKvA&oe=681ADA00" alt="John Kyle Ramos">
+          <span>John Kyle Ramos</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-container">
@@ -122,12 +154,28 @@
     </div>
   </footer>
 
-  <script>
-    // Toggle the dropdown menu visibility (for mobile)
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdown');
-      dropdown.classList.toggle('active');
-    }
-  </script>
+  <!-- Modal Overlay for Product Details -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="Product Image" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <span id="modal-price"></span>
+      <button id="cart-button" onclick="simulateAddToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Modal Overlay for Cart -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCartModal()">&times;</span>
+      <h3>Your Cart</h3>
+      <ul id="cart-items-list"></ul>
+      <button id="pay-button" onclick="payCart()">Pay</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
